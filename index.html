@@ -6,189 +6,193 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
-<meta name="description" content="Ritesh Mattoo | Data Analyst skilled in SQL, Power BI, Python, Statistical Analysis">
+<meta name="description" content="Ritesh Mattoo - Data Analyst skilled in SQL, Power BI, Python, Statistical Analysis">
 <meta name="keywords" content="Data Analyst, SQL, Power BI, Python, Portfolio">
 <meta name="author" content="Ritesh Mattoo">
 
 <style>
-/* ---------- ROOT ---------- */
-:root{
-  --bg:#020617;
-  --bg-soft:#0b1220;
-  --card:#0f172a;
-  --accent:#38bdf8;
-  --accent-dark:#2563eb;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
+/* ================= ROOT ================= */
+:root {
+  --bg: #020617;
+  --card: #0f172a;
+  --accent: #38bdf8;
+  --accent-dark: #2563eb;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
 }
 
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  font-family:"Segoe UI",system-ui,sans-serif;
-  background:linear-gradient(180deg,var(--bg),var(--bg-soft));
-  color:var(--text);
+html {
+  scroll-behavior: smooth;
 }
 
-/* ---------- NAVBAR ---------- */
-.navbar{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(2,6,23,.9);
-  backdrop-filter:blur(8px);
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:14px;
-  z-index:1000;
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, #020617, #0b1220);
+  color: var(--text);
 }
 
-.navbar a{
-  color:var(--muted);
-  text-decoration:none;
-  font-weight:600;
-}
-.navbar a:hover{color:var(--accent);}
-
-/* Offset for anchor scroll */
-section{scroll-margin-top:90px;}
-
-/* ---------- HERO ---------- */
-.hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:120px 20px 40px;
+/* ================= NAVBAR ================= */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2,6,23,0.9);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  padding: 14px 0;
 }
 
-.hero h1{font-size:56px;margin:0;}
-.hero p{font-size:22px;color:var(--muted);margin:12px 0 22px;}
-
-.hero-links a{
-  margin:0 14px;
-  color:var(--accent);
-  font-weight:600;
-  text-decoration:none;
-}
-.hero-links a:hover{text-decoration:underline;}
-
-/* ---------- SECTIONS ---------- */
-.section{
-  max-width:1100px;
-  margin:auto;
-  padding:80px 20px;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.section h2{
-  color:var(--accent);
-  font-size:34px;
-  margin-bottom:30px;
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
 }
 
-/* ---------- CARDS ---------- */
-.card{
-  background:linear-gradient(180deg,var(--card),#020617);
-  padding:28px;
-  border-radius:18px;
-  box-shadow:0 20px 45px rgba(0,0,0,.6);
-  margin-bottom:25px;
+nav a:hover {
+  color: var(--accent);
 }
 
-/* ---------- EXPERIENCE TIMELINE ---------- */
-.timeline{
-  border-left:3px solid var(--accent);
-  padding-left:30px;
-}
-.timeline .card{position:relative;}
-.timeline .card::before{
-  content:"";
-  position:absolute;
-  left:-42px;
-  top:30px;
-  width:14px;
-  height:14px;
-  background:var(--accent);
-  border-radius:50%;
+/* ================= HERO ================= */
+.hero {
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* ---------- SKILLS ---------- */
-.skills{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
-}
-.skill{
-  background:linear-gradient(180deg,#0f172a,#020617);
-  padding:22px;
-  border-radius:16px;
-  text-align:center;
-  font-weight:600;
-  animation:float 3s ease-in-out infinite;
-}
-.skill:nth-child(even){animation-delay:1s;}
-
-@keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-8px);}
+.hero h1 {
+  font-size: 56px;
+  margin: 0;
 }
 
-/* ---------- PROJECTS ---------- */
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:30px;
-}
-.project{
-  background:linear-gradient(180deg,#020617,#020617);
-  padding:28px;
-  border-radius:18px;
-  box-shadow:0 25px 50px rgba(0,0,0,.7);
-  transition:.35s;
-}
-.project:hover{transform:translateY(-10px);}
-.project a{
-  display:inline-block;
-  margin-top:14px;
-  padding:12px 24px;
-  background:var(--accent-dark);
-  color:#fff;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
+.hero p {
+  font-size: 22px;
+  color: var(--muted);
+  margin: 14px 0 26px;
 }
 
-/* ---------- CONTACT ---------- */
-.contact p{font-size:18px;}
+.hero-links a {
+  margin: 0 14px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
 
-/* ---------- FOOTER ---------- */
-footer{
-  text-align:center;
-  padding:30px;
-  color:var(--muted);
-  background:#020617;
+.hero-links a:hover {
+  text-decoration: underline;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.section h2 {
+  font-size: 34px;
+  color: var(--accent);
+  margin-bottom: 30px;
+}
+
+/* ================= CARDS ================= */
+.card {
+  background: linear-gradient(180deg, #0f172a, #020617);
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+  margin-bottom: 25px;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 22px;
+}
+
+.skill {
+  background: #020617;
+  padding: 22px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform .3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= PROJECTS ================= */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 30px;
+}
+
+.project {
+  background: linear-gradient(180deg, #020617, #020617);
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+  transition: transform .35s ease;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 24px;
+  background: var(--accent-dark);
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+  background: #020617;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+<!-- ================= NAV ================= -->
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <section class="hero" id="about">
   <h1>Ritesh Mattoo</h1>
-  <p>Data Analyst | SQL | Power BI | Python | Statistical Analysis</p>
+  <p>Data Analyst | SQL | Power BI | Python</p>
 
   <div class="hero-links">
     <a href="https://www.linkedin.com/in/ritesh-mattoo-39a486217/" target="_blank">LinkedIn</a>
@@ -197,87 +201,89 @@ footer{
   </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- ================= EXPERIENCE ================= -->
 <section class="section" id="experience">
-<h2>Experience</h2>
+  <h2>Experience</h2>
 
-<div class="timeline">
-<div class="card">
-<h3>Data Specialist — Just Appraised (Remote)</h3>
-<em>Dec 2024 – Present</em>
-<ul>
-<li>Prepared, validated, and standardized assessor datasets across US counties</li>
-<li>Identified tax inconsistencies, missing fields, formatting and property issues</li>
-<li>Developed Data Quality KPIs (accuracy %, trends, county performance)</li>
-<li>Built Power BI dashboards for leadership reporting</li>
-<li>Collaborated with engineering teams to improve data consistency</li>
-</ul>
-</div>
+  <div class="card">
+    <h3>Data Specialist – Just Appraised (Remote)</h3>
+    <em>Dec 2024 – Present</em>
+    <ul>
+      <li>Prepared, validated, and standardized assessor datasets across US counties</li>
+      <li>Identified tax inconsistencies, missing fields, and irregular property data</li>
+      <li>Developed Data Quality KPIs (accuracy %, trends, county performance)</li>
+      <li>Built Power BI dashboards for leadership reporting</li>
+      <li>Collaborated with engineering teams to improve data consistency</li>
+    </ul>
+  </div>
 
-<div class="card">
-<h3>Data Analyst Trainee — Techlive Solutions</h3>
-<em>Jun 2023 – Jul 2023</em>
-<ul>
-<li>Cleaned datasets using SQL and Excel</li>
-<li>Performed exploratory data analysis</li>
-<li>Built Power BI dashboards with SQL integration</li>
-</ul>
-</div>
-</div>
+  <div class="card">
+    <h3>Data Analyst Trainee – Techlive Solutions</h3>
+    <em>Jun 2023 – Jul 2023</em>
+    <ul>
+      <li>Cleaned and analyzed datasets using SQL & Excel</li>
+      <li>Built interactive Power BI dashboards</li>
+    </ul>
+  </div>
 </section>
 
-<!-- SKILLS -->
+<!-- ================= SKILLS ================= -->
 <section class="section" id="skills">
-<h2>Skills</h2>
-<div class="skills">
-<div class="skill">SQL & MySQL</div>
-<div class="skill">Python (Pandas, NumPy)</div>
-<div class="skill">Power BI & DAX</div>
-<div class="skill">Excel (Pivot Tables, XLOOKUP)</div>
-<div class="skill">Statistical Analysis</div>
-<div class="skill">Data Cleaning & EDA</div>
-<div class="skill">KPI Reporting</div>
-</div>
+  <h2>Skills</h2>
+
+  <div class="skills">
+    <div class="skill">SQL • MySQL • Joins • Subqueries</div>
+    <div class="skill">Python (Pandas, NumPy, Matplotlib)</div>
+    <div class="skill">Power BI (DAX, KPIs, Dashboards)</div>
+    <div class="skill">Excel (Pivot Tables, XLOOKUP)</div>
+    <div class="skill">Statistical Analysis & EDA</div>
+    <div class="skill">Data Cleaning & Data Wrangling</div>
+  </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ================= PROJECTS ================= -->
 <section class="section" id="projects">
-<h2>Projects</h2>
+  <h2>Projects</h2>
 
-<div class="projects">
-<div class="project">
-<h3>Legacy County Data Migration & Standardization</h3>
-<p>Python, MySQL, Power BI</p>
-<p>Standardized legacy datasets and tracked data quality KPIs.</p>
-<a href="https://github.com/RiteshMattoo/legacy-county-migration" target="_blank">GitHub Repository</a>
-</div>
+  <div class="projects">
+    <div class="project">
+      <h3>Legacy County Data Migration & Standardization</h3>
+      <p>Python, MySQL, Power BI</p>
+      <a href="https://github.com/RiteshMattoo/legacy-county-migration" target="_blank">GitHub Repository</a>
+    </div>
 
-<div class="project">
-<h3>Customer Churn Prediction & Retention</h3>
-<p>SQL, Power BI</p>
-<p>Identified high-risk customers using SQL and dashboards.</p>
-<a href="https://github.com/RiteshMattoo/Customer-Churn-analysis" target="_blank">GitHub Repository</a>
-</div>
+    <div class="project">
+      <h3>Customer Churn Prediction & Retention</h3>
+      <p>SQL, Power BI</p>
+      <a href="https://github.com/RiteshMattoo/Customer-Churn-analysis" target="_blank">GitHub Repository</a>
+    </div>
 
-<div class="project">
-<h3>HR Analytics & Attrition Prediction</h3>
-<p>Python, MySQL</p>
-<p>Analyzed attrition drivers and high-risk segments.</p>
-<a href="https://github.com/RiteshMattoo/HR-Analytics-Attrition-Prediction" target="_blank">GitHub Repository</a>
-</div>
-</div>
+    <div class="project">
+      <h3>HR Analytics & Attrition Prediction</h3>
+      <p>Python, MySQL</p>
+      <a href="https://github.com/RiteshMattoo/HR-Analytics-Attrition-Prediction" target="_blank">GitHub Repository</a>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-<h2>Contact</h2>
-<p>Email: <strong>riteshmattoo02@gmail.com</strong></p>
-<p>Location: <strong>Jammu & Kashmir, India</strong></p>
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email: <strong>riteshmattoo02@gmail.com</strong></p>
+  <p>Location: <strong>Jammu & Kashmir, India</strong></p>
 </section>
 
 <footer>
-© 2025 Ritesh Mattoo
+  © 2025 Ritesh Mattoo
 </footer>
+
+<!-- ================= BUG FIX SCRIPT ================= -->
+<script>
+  if (window.location.hash) {
+    history.replaceState(null, null, ' ');
+    window.scrollTo(0, 0);
+  }
+</script>
 
 </body>
 </html>
